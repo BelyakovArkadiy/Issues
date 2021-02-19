@@ -29,14 +29,14 @@ public class IssueRepository {
         issues.removeIf(item ->item.getId() == id);
 
     }
-    public void saveAll(Collection<? extends Issue> products){
-        issues.addAll(products);
+
+
+    public void removeAll(Collection<? extends Issue> issues){
+        issues.removeAll(issues);
     }
-    public void removeAll(Collection<? extends Issue> products){
-        issues.removeAll(products);
+
     }
 
 
 
 
-}

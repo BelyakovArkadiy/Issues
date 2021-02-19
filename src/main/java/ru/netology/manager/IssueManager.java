@@ -8,32 +8,27 @@ import java.util.function.Predicate;
 
 public class IssueManager {
     private IssueRepository repository;
-    private Predicate<Issue> comparator;
+
 
     public IssueManager(IssueRepository repository) {
         this.repository = repository;
     }
 
-    public Issue[] searchByAuthor(String author, Predicate<Issue> comparator) {
+    /*public Issue[] searchByAuthor(String author) {
         Issue[] result = new Issue[0];
         for (Issue issue : repository.findAll()) {
-            if (matches(issue, author)) {
+            if (equals(issue.setAuthor(),issue.getAuthor()) {
                 Issue[] tmp = new Issue[result.length + 1];
                 System.arraycopy(result, 0, tmp, 0, result.length);
                 tmp[tmp.length - 1] = issue;
                 result = tmp;
             }
         }
-        Arrays.asList(result, comparator);
+        Arrays.sort(result);
 
         return result;
-    }
+    }*/
 
 
-    public boolean matches(Issue issue, String author) {
-        if (issue.getAuthor().equalsIgnoreCase(author) ) {
-            return true;
-        }
-        return false;
-    }
+
 }
